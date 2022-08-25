@@ -8,8 +8,9 @@
     background-color: #FBE1D6;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
-   
+    background-repeat: repeat;
+    height: 100vh;
+    overflow: hidden;
 }
 
 #firstSection{
@@ -29,4 +30,22 @@
 .topImages{
     display: flex;
     justify-content: space-between;
+}
+.bottomImage{
+    display: flex;
+    margin-bottom: 800px;
+}
+.nameAndDescription{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 120px;
+}
+.nameAndDescription p{
+    font-size: 22px;
+    color: #fff;
+}
+.benName{
+    font-size: 150px;
+    color: #fff;
 }
