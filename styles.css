@@ -3,22 +3,30 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: Monday Handbrush;
+    src: url('assets/monday-handbrush-font/MondayHandbrush-6YMdA.otf');
+    
+}
 
-.Ben-bg{
+body{
     background-color: #FBE1D6;
     background-size: cover;
     background-position: center;
     background-repeat: repeat;
     height: 100vh;
-    overflow: hidden;
 }
 
-#firstSection{
+.Ben-bg .logo{
+    width: 250px;
+}
+
+.Ben-bg #firstSection{
     background-image: url('assets/L1.png');
     background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
-    width: 100vw;
+    height: 800px;
+    width: 100%;
     position: relative;
 }
 .logo{
@@ -27,13 +35,29 @@
 
 
 }
-.topImages{
-    display: flex;
-    justify-content: space-between;
+#firstSection{
+    max-width: 1200px;
+    margin-left: 90px;
 }
-.bottomImage{
+#firstSection .topImages{
     display: flex;
-    margin-bottom: 800px;
+    align-items: center;
+    justify-content: space-between;
+  
+    
+}
+.topImages img{
+    width: 400px;
+    height: 100%;
+    cursor: pointer;
+}
+#firstSection .bottomImage{
+    display: flex;
+    margin-top: 150px;
+}
+.bottomImage img{
+    width: 300px;
+    height: 100%;
 }
 .nameAndDescription{
     display: flex;
@@ -43,9 +67,11 @@
 }
 .nameAndDescription p{
     font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
     color: #fff;
 }
-.benName{
-    font-size: 150px;
+.nameAndDescription .benName{
+    font-family: MondayHandbrush;
+    font-size: 80px;
     color: #fff;
 }
