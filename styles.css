@@ -107,6 +107,8 @@ body{
 }
 
 @keyframes animate {
-    from {background-image: url(assets/L1.png);}
-    to {background-image: url(assets/L2.png);}
+    0% {background-image: url(assets/L1.png);}
+    25% {background-image: url(assets/L1.png);}
+    50% {background-image: url(assets/L2.png);}
+    100%{background-image: url(assets/L2.png);}
 }
