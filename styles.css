@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -13,8 +14,8 @@ body{
     background-color: #FBE1D6;
     background-size: cover;
     background-position: center;
-    background-repeat: repeat;
-    height: 100vh;
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
 .Ben-bg .logo{
@@ -25,13 +26,15 @@ body{
     background-image: url('assets/L1.png');
     background-repeat: no-repeat;
     background-position: center;
-    height: 800px;
+    max-height: fit-content;
     width: 100%;
-    position: relative;
+
+
 }
-.logo{
+.Ben-bg .logo{
+
   position: absolute;
-  cursor: pointer;
+
 
 
 }
@@ -49,6 +52,9 @@ body{
 .topImages img{
     width: 400px;
     height: 100%;
+  
+}
+.topImages img:hover{
     cursor: pointer;
 }
 #firstSection .bottomImage{
@@ -63,15 +69,23 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    margin-left: 120px;
+    margin-left: 220px;
+   
 }
 .nameAndDescription p{
     font-size: 22px;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;
+    font-weight: 300;
 }
-.nameAndDescription .benName{
-    font-family: MondayHandbrush;
-    font-size: 80px;
+#firstSection .benName{
+    display: flex;
+    /* font-family: 'DynaPuff', cursive; */
+    /* font-family: Monday Handbrush; */
+    font-size: 110px;
+    max-height: 54%;
     color: #fff;
+    font-family: Monday Handbrush;
+    line-height: 1;
+    margin-bottom: 20px;
 }
