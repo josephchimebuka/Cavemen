@@ -20,10 +20,10 @@ function swapImage(){
             $("#OkorieSection").fadeOut();
             $("#BenjiSection").fadeIn();
         }
-    }, 2000);
+    }, 6000);
     setTimeout(function(){
         swapImage();
-    }, 4000)
+    }, 10000)
 }
 $(document).ready(function() {
     swapImage();
