@@ -58,13 +58,15 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 1200px;
-    height: 100%;
     margin-top: 30px;
+    height:auto;
+    overflow: hidden;
 }
 .topImages img{
     width: 310px;
     height: 100%;
     padding: 20px;
+    transition: all .3s ease-in-out;
   
 }
 .topImages .tree{
@@ -73,10 +75,7 @@ body{
 }
 
 .topImages img:hover{
-    transition: 0.5s ease;
-    cursor: pointer;
-    width: 330px;
-    height: 100%;
+    transform: scale(1.2);
 }
 .bottomImage{
     display: flex;
@@ -90,9 +89,7 @@ body{
 }
 
 .bottomImage img:hover{
-    transition: 0.5s ease;
-    cursor: pointer;
-    width: 330px;
+    transform: scale(1.2);
 }
 
  .benName{
@@ -106,7 +103,7 @@ body{
     line-height: 1;
     margin-bottom: 20px;
 }
-#BenjiSection .nameAndDescription{
+#BenjiSection,#OkorieSection .nameAndDescription{
     display: flex;
     flex-direction: column;
     margin-left: 600px;
@@ -127,7 +124,6 @@ body #OkorieSection{
     width: 100vw;
     position: relative;
     height: 100vh;
-    display: none;
 }
 #BenjiSection{
     background-image: url(assets/L1.png);
@@ -135,9 +131,10 @@ body #OkorieSection{
     background-position: center;
     max-height: fit-content;
     width: 100vw;
-    position: relative;
+    position: absolute;
     height: 100vh;
     z-index: -1;
+    display: none;
 }
 
 
