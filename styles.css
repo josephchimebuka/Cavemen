@@ -64,7 +64,7 @@ body{
 .topImages img{
     width: 310px;
     height: 100%;
-    margin: 0;padding: 0;
+    padding: 20px;
   
 }
 .topImages .tree{
@@ -76,6 +76,7 @@ body{
     transition: 0.5s ease;
     cursor: pointer;
     width: 330px;
+    height: 100%;
 }
 .bottomImage{
     display: flex;
