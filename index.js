@@ -13,17 +13,21 @@
 
 
 function swapImage(){
-    $("#BenjiSection").fadeOut();
-    $("#OkorieSection").fadeIn();
+    $("#BenjiSection").show(10000);
+    $("#BenjiSection").fadeOut(6000);
+    $("#OkorieSection").fadeIn(6000);
+    $("#OkorieSection").show(10000);
+    $("#BenjiSection").fadeOut(6000);
     setTimeout( function(){
         {
-            $("#OkorieSection").fadeOut();
-            $("#BenjiSection").fadeIn();
+            $("#OkorieSection").show(10000);
+            $("#OkorieSection").fadeOut(6000);
+            $("#BenjiSection").fadeIn(6000);
         }
     }, 6000);
     setTimeout(function(){
         swapImage();
-    }, 10000)
+    }, 8000)
 }
 $(document).ready(function() {
     swapImage();

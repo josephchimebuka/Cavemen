@@ -63,28 +63,28 @@ body{
     overflow: hidden;
 }
 .topImages img{
-    width: 310px;
+    width: 350px;
     height: 100%;
     padding: 20px;
     transition: all .3s ease-in-out;
   
 }
-.topImages .tree{
+/* .topImages .tree{
     width: 300px;
     height: 100%;
-}
+} */
 
 .topImages img:hover{
     transform: scale(1.2);
 }
 .bottomImage{
     display: flex;
-    margin-top: 150px;
+    margin-top: 120px;
     justify-content: space-between;
     width: 1200px;
 }
 .bottomImage img{
-    width: 300px;
+    width: 280px;
     height: 100%;
     transition: all .3s ease-in-out;
 }
