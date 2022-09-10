@@ -132,7 +132,6 @@ body{
     width: 100%;
     position: relative;
     height: 100vh;
-    display: none;
 }
 #BenjiSection{
     background-image: url(assets/L1.png);

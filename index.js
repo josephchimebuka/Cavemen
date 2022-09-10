@@ -42,3 +42,25 @@ t1.from(".benName span",1,{opacity:0,x:-30, y:-20, scale: 2,
 stagger: {
   amount: 0.7
 } })
+
+let images =  gsap.utils.toArray(".bg"),
+t2 = gsap.timeline({repeat:-1}),
+fadeDuration = 1.5,
+stayDuration = 3;
+
+gsap.set(images[0], {autoAlpha:1})
+
+t2.to(images[1], {delay:stayDuration, autoAlpha:1,
+  duration: fadeDuration,stagger: fadeDuration + stayDuration})
+
+  .to(images[0], {autoAlpha: 0, duration:0.01, stagger: stayDuration + fadeDuration}, stayDuration + fadeDuration)
+  .set(images[0], {autoAlpha: 1})
+
+  .to(images[1], {autoAlpha: 0, duration: fadeDuration}, "+=" + stayDuration);
+
+
+
+
+
+
+
