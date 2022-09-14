@@ -46,27 +46,46 @@ function textAnimation(){
 }
 textAnimation();
 
-let images =  gsap.utils.toArray(".bg"),
-t2 = gsap.timeline({repeat:-1}),
-fadeDuration = 2,
-stayDuration = 8;
-
-gsap.set(images[0], {autoAlpha: 1});
-
-t2.from(images[0], {delay:stayDuration, autoAlpha:0,
-  duration: fadeDuration,stagger: 2}),
- 
-  t2.to(images[1], {delay:stayDuration, autoAlpha:1,
-    duration: fadeDuration,stagger: 2})
+function switchAnimation(){
+  let images =  gsap.utils.toArray(".bg"),
+  t2 = gsap.timeline({repeat:-1}),
+  fadeDuration = 2,
+  stayDuration = 8;
   
-  .to(images[1], {autoAlpha: 0, duration:fadeDuration, stagger: stayDuration + fadeDuration}, stayDuration + fadeDuration)
-  .set(images[0], {autoAlpha: 1, duration: fadeDuration})
+  gsap.set(images[0], {autoAlpha: 1});
+  
+  t2.from(images[0], {delay:stayDuration, autoAlpha:0,
+    duration: fadeDuration,stagger: 2}),
+   
+    t2.to(images[1], {delay:stayDuration, autoAlpha:1,
+      duration: fadeDuration,stagger: 2})
+    
+    .to(images[1], {autoAlpha: 0, duration:fadeDuration, stagger: stayDuration + fadeDuration}, stayDuration + fadeDuration)
+    .set(images[0], {autoAlpha: 1, duration: fadeDuration})
+  
+  
+    .to(images[images.length+1], {autoAlpha: 1, duration: fadeDuration}, "+=" + stayDuration);
+}
 
+switchAnimation();
 
-  .to(images[images.length+1], {autoAlpha: 1, duration: fadeDuration}, "+=" + stayDuration);
+//On hover the nav image will display the text
 
+const navLink = document.querySelectorAll(".Nav_text");
 
+navLink.forEach((link, index) => {
+  link.addEventListener('mouseenter', () => {
+    let linkTl = gsap.timeline();
 
+   linkTl.to(`.Nav_text__${index+1} .Nav_text span`, 0.8, {
+    opacity: 1,
+    y: -30,
+    x: -20,
+    ease: "back.out(2)",
+    stagger: {
+      amount: 0.7
+    }
+  }, "-=1.5")
+})
 
-
-
+})
