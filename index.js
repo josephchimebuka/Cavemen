@@ -71,13 +71,14 @@ switchAnimation();
 
 //On hover the nav image will display the text
 
-const navLink = document.querySelectorAll(".Nav_text");
+const navLink = document.querySelectorAll(".Navtext");
+const navImages = document.querySelectorAll(".navPic");
 
-navLink.forEach((link, index) => {
+navImages.forEach((link, index) => {
   link.addEventListener('mouseenter', () => {
     let linkTl = gsap.timeline();
 
-   linkTl.to(`.Nav_text__${index+1} .Nav_text span`, 0.8, {
+   linkTl.to(`.link__${index+1} navLink`,0.8, {
     opacity: 1,
     y: -30,
     x: -20,
@@ -89,3 +90,21 @@ navLink.forEach((link, index) => {
 })
 
 })
+
+// const navLink = document.querySelectorAll(".Nav_text");
+// const navImages = document.querySelectorAll(".navPic");
+
+// gsap.utils.toArray(".navPic").forEach(image =>{
+// image.addEventListener("onmouseenter", () =>{
+//   gsap.to(navLink,{
+//     opacity: 1,
+//         y: -30,
+//         x: -20,
+//         ease: "back.out(2)",
+//         stagger: {
+//           amount: 0.7
+//         }
+
+//   })
+// })
+// })
