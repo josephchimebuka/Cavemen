@@ -1,37 +1,4 @@
-// const benjiPage =  document.getElementById("BenjiSection");
-// const okoriePage = document.getElementById("OkorieSection");
 
-// function changingPages(){
-// if(okoriePage.style.display === "none"){
-//     benjiPage.style.display === "block"
-// }else if( benjiPage.style.display === "none"){
-//     okoriePage.style.display === "block"
-// }
-// }
-
-// changingPages();
-
-
-// function swapImage(){
-//     $("#BenjiSection").show(10000);
-//     $("#BenjiSection").fadeOut(6000);
-//     $("#OkorieSection").fadeIn(6000);
-//     $("#OkorieSection").show(10000);
-//     $("#BenjiSection").fadeOut(6000);
-//     setTimeout( function(){
-//         {
-//             $("#OkorieSection").show(10000);
-//             $("#OkorieSection").fadeOut(6000);
-//             $("#BenjiSection").fadeIn(6000);
-//         }
-//     }, 6000);
-//     setTimeout(function(){
-//         swapImage();
-//     }, 8000)
-// }
-// $(document).ready(function() {
-//     swapImage();
-// });
 
 function textAnimation(){
 
@@ -45,6 +12,45 @@ function textAnimation(){
   } })
 }
 textAnimation();
+
+
+//On hover the nav image will display the text
+
+
+const navImages = document.querySelectorAll(".nav_link");
+
+navImages.forEach((link, index) => {
+  link.addEventListener('mouseenter', () => {
+    let linkTl = gsap.timeline();
+
+   linkTl.from(`.navPic_${index+1} .Navtext span`,0.8,  {
+    opacity: 1,
+    y: -30,
+    x: -20,
+    duration:2,
+    scale: 2,
+    ease: "back.out(2)",
+    stagger: {
+      amount: 0.7
+    }
+  })
+  
+})
+link.addEventListener('mouseleave', () => {
+  let linkLeaveTL = gsap.timeline();
+
+  linkLeaveTL.to(`.navPic_${index+1} .Navtext span`, 0.8, {
+    opacity: 0,
+    y: 0,
+    x: 0,
+    ease: "back.out(2)",
+    stagger: {
+      amount: 0.6
+    }
+  })
+})
+})
+
 
 function switchAnimation(){
   let images =  gsap.utils.toArray(".bg"),
@@ -68,43 +74,3 @@ function switchAnimation(){
 }
 
 switchAnimation();
-
-//On hover the nav image will display the text
-
-const navLink = document.querySelectorAll(".Navtext");
-const navImages = document.querySelectorAll(".navPic");
-
-navImages.forEach((link, index) => {
-  link.addEventListener('mouseenter', () => {
-    let linkTl = gsap.timeline();
-
-   linkTl.to(`.navPic_${index+1} .Navtext span`,0.8, {
-    opacity: 1,
-    y: -30,
-    x: -20,
-    ease: "back.out(2)",
-    stagger: {
-      amount: 0.7
-    }
-  }, "-=1.5")
-})
-
-})
-
-// const navLink = document.querySelectorAll(".Nav_text");
-// const navImages = document.querySelectorAll(".navPic");
-
-// gsap.utils.toArray(".navPic").forEach(image =>{
-// image.addEventListener("onmouseenter", () =>{
-//   gsap.to(navLink,{
-//     opacity: 1,
-//         y: -30,
-//         x: -20,
-//         ease: "back.out(2)",
-//         stagger: {
-//           amount: 0.7
-//         }
-
-//   })
-// })
-// })

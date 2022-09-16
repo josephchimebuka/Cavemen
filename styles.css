@@ -64,7 +64,7 @@ body{
     height:auto;
     overflow: hidden;
 }
-.topImages img{
+.topImages img { 
     width: 350px;
     height: 100%;
     padding: 20px;
@@ -145,31 +145,31 @@ body{
   
     
 }
-
-.Navtext{
+a{
+    text-decoration: none;
+}
+ .Navtext{
     position: relative;
     font-family: Monday Handbrush;
     font-weight: 400;
     font-size: 40px;
     line-height: 0;
     color: #fff;
-    z-index: 1;
-    opacity:0;
+    z-index: 999;
 }
 
 
 #gallery{
-    right: 330px;
-     
-    top: 30px;
+    right: 300px;
+    top: 0px;
 }
 #History{
    left: 300px;
-   top: 30px;
+   top: 0px;
 }
 #discography{
     right: 900px;
-    top: 90px;
+    top: 100px;
 }
 
 /* @keyframes animate {
