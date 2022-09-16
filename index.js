@@ -78,7 +78,7 @@ navImages.forEach((link, index) => {
   link.addEventListener('mouseenter', () => {
     let linkTl = gsap.timeline();
 
-   linkTl.to(`.link__${index+1} navLink`,0.8, {
+   linkTl.to(`.navPic_${index+1} .Navtext span`,0.8, {
     opacity: 1,
     y: -30,
     x: -20,
