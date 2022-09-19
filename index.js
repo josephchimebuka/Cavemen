@@ -1,4 +1,8 @@
-
+tl = gsap.timeline();
+tl.from(".nav_link",1,{
+  opacity:0,
+  
+})
 
 function textAnimation(){
 
@@ -14,6 +18,7 @@ function textAnimation(){
 textAnimation();
 
 
+
 //On hover the nav image will display the text
 
 
@@ -23,11 +28,10 @@ navImages.forEach((link, index) => {
   link.addEventListener('mouseenter', () => {
     let linkTl = gsap.timeline();
 
-   linkTl.from(`.navPic_${index+1} .Navtext span`,0.8,  {
+   linkTl.to(`.navPic_${index+1} .Navtext span`,1.2,  {
     opacity: 1,
-    y: -30,
-    x: -20,
-    duration:2,
+    y: 30,
+    x: 20,
     scale: 2,
     ease: "back.out(2)",
     stagger: {
