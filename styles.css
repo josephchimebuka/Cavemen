@@ -18,6 +18,7 @@ body{
     height: 100vh;
     overflow-x: hidden;
     overflow-y: scroll;
+    box-sizing: border-box;
 }
 
 .Ben-bg .logo{
@@ -147,10 +148,8 @@ body{
 }
 a{
     text-decoration: none;
+    width: 300px;
 }
-
-
-
  .Navtext{
     position: relative;
     font-family: Monday Handbrush;
